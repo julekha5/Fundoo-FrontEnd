@@ -1,0 +1,138 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color:white;
+    background-repeat: no-repeat;
+} 
+.register{
+    padding: 5% 0 0;
+    margin:auto;
+}
+.card0 {
+    box-shadow: 5px 8px 5px 8px #757575;
+    border-radius: 5px;
+    width:60%;
+    height:auto;
+}
+
+.card2 {
+    margin:30px;
+}
+
+.heading{
+    text-align: center;
+    color:#654ea3
+}
+image {
+    width: 300px;
+    height: 285px
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+input{
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+
+.btn-primary {
+    background-color: #1A237E;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.btn-primary:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+.btn-ultra-voilet {
+    background: #654ea3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-ultra-voilet::after{
+    background-color: green;
+    cursor: pointer;
+}
+
+.forgot-pwd{
+font-size:12px;
+float:right;
+color:#654ea3;
+}
+.remember{
+    float:left;
+    color:#654ea3;
+    font-size:12px;
+}
+.new-account{
+    font-size:14px;
+    color:#654ea3;
+    text-align: center;
+}
+
+
+.btn-ultra-green {
+    background: #008000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #008000 );  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #008000 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid green;
+    padding: 4px;;
+}
+.btn-ultra-green:hover{
+    /* -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+    text-indent: 30px;
+    */
+   
+  background: #654ea3;
+  color:white;
+  transition: all .35s;
+  opacity: .4; 
+  text-indent: 15px;
+}
+
+
+.errors{
+    font-size:12px;
+    color:red;
+}
