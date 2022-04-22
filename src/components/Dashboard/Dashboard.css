@@ -1,0 +1,161 @@
+*{
+margin:0;
+box-sizing: border-box;
+}
+
+.header{
+    height:80px;
+    border-bottom:1px solid rgba(0,0,0,.2);
+    width:100%;
+    padding-top:8px;
+}
+
+.navbar.navbar-1 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+}
+
+.navbar-toggler{
+    border:none;
+    border-radius: 50%;
+    padding:10px;
+    cursor: pointer;
+    justify-content:flex-start;
+    position:sticky;
+    top:0;
+    left:0;
+}
+
+.navbar.navbar-1 .navbar-toggler-icon:after{
+    border-radius: 50%; 
+    padding: 5px;
+    background-color:rgba(60,64,67,0.1);
+    cursor:pointer;
+}
+
+.navbar-collapse{
+  margin-top:3px;
+  margin-right:5px;
+  box-sizing: border-box;
+}
+
+.nav-item {
+    height: auto;
+    padding-bottom:3px;
+    padding-top:3px; 
+    cursor: pointer;
+} 
+
+.collapse{
+   height:1000px;
+}
+
+ul::after{
+    padding-top:10px;
+}
+
+.nav-item:hover {
+    background-color: #feefc3;
+    color:#202124;
+}
+
+.keep{
+    width: 40px;
+    height: 40px;
+    float:left;
+    margin-left:-80px;
+}
+
+.keep-text{
+    color:#5f6368;
+    display: block;
+    font-family: 'Product Sans',Arial,sans-serif;
+    font-size: 24px;
+    margin-left:-28px;
+}
+
+.keep-text:hover{
+    text-decoration: underline;
+}
+
+.side-notes{
+    color:#202124;
+    display:block;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.side-notes:hover{
+    flex-direction: column;
+    display: block;
+}
+
+.img1{
+  height:10;
+  width:10;
+}
+
+.search-icon{
+    float: left;
+    margin-top: 10px;
+}
+
+.search-container {
+    background: transparent;
+    font-size: 17px;
+    cursor: pointer;
+    width:600px;
+    border: none;
+    text-decoration: none;;
+  }
+
+#top-search{
+    box-sizing: border-box;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type=text]{
+    border: none; 
+    color:#202124;
+}    
+
+.fa .fa-search{
+      border:1px solid grey;
+}
+
+.fa-lightbulb-o, .fa-bell-o, .fa-pencil, .fa-archive, .fa-trash-o{
+      font-weight:12px;
+      padding:10px;
+      display:inline-block;
+}
+  
+.navbar-collapse{
+    margin-top:8px;
+    line-height:2.5;
+    width:50px;
+}
+
+.logout{
+      float:right;
+      position:relative;
+      margin-right:-500px;
+}
+
+#dash-page{
+    margin-top:25px;
+} 
+
+ul {
+    list-style-type: none;
+}
+
+.displaynote{
+   flex-direction: column;
+} 
+
+.g-signin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
