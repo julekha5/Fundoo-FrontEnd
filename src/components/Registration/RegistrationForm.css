@@ -35,9 +35,9 @@ image {
     font-weight: 300
 }
 
-input{
+input[type=text], input[type=email], input[type=password]{
     padding: 10px 12px 10px 12px;
-    border: 1px solid lightgrey;
+    border: 1px solid green;
     border-radius: 2px;
     margin-bottom: 5px;
     margin-top: 2px;
@@ -52,7 +52,7 @@ input:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #304FFE;
+    border: 1px solid lightgrey;
     outline-width: 0
 }
 

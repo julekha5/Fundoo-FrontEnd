@@ -42,8 +42,12 @@ function ResetPassword() {
 
             console.log(inputs);
             alert("password reset successfully...!");
+            window.location.href = '/login';
+
         } else {
             alert("password not reset...!");
+            // window.location.href = '/resetPassword/:token';
+
         }
     }
 

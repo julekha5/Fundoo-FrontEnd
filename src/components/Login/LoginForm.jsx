@@ -1,14 +1,19 @@
 import React from 'react'
-import { useEffect, useState } from "react";
+import {useState} from "react";
 import '././LoginForm.css';
 import { Link } from "react-router-dom";
 import { omit } from 'lodash';
 import { UserService } from '../../services/UserService';
 import '././ForgotPassword';
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
 
     let userService = new UserService();
+
+    let navigate = useNavigate();
+
+    // let userInfo = localStorage.getItem("token")
 
     const [inputs, setInputs] = useState({});
 
@@ -80,18 +85,26 @@ function LoginForm() {
         if (Object.keys(errors).length === 0 && Object.keys(inputs).length !== 0) {
           userService.login(inputs)    //calling login API 
                         .then((resp) => {
-                            console.log(resp)
-                        //localStorage.setItem('token', resp.data.id);
+                        console.log(resp)
+                        localStorage.setItem('token', resp.data.data);
+                        // if(userInfo){
+                        // navigate("/dash") 
+                        // }                        
                 })
                 .catch((error) => { console.log(error) })
-
+    
                 console.log(inputs);
+               
         } else {
             alert("There is an Error!");
+           // window.location.href = '/login';
+
         }
+
+        navigate("/dash");
+
     }
 
-  
     return (
         <>
             <div className="container login">

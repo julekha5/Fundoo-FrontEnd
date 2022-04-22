@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import '././RegistrationForm.css';
 import { Link } from "react-router-dom";
 import { omit } from 'lodash';
@@ -128,7 +128,7 @@ function RegistrationForm() {
                                 <div className="col-lg-6">
                                     <form id="register" onSubmit={handleSubmit}>
 
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label>FirstName:</label>
                                             <br></br>
                                             <input
