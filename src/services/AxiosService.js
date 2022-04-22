@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 class AxiosService {
-  get(url,data,headers){
+  get(url,headers){
     return axios({
         method:'get',
         url:url,
-        data:data,
-        headers:headers,
+        // data:data,
+         headers:headers
     })
   }
 
@@ -28,11 +28,11 @@ class AxiosService {
     }) 
  }
 
- delete(url,data,headers){
+ delete(url,headers){
   return axios({
       method:'delete',
       url:url,
-      data:data,
+      // data:data,
       headers: headers,
   }) 
 }

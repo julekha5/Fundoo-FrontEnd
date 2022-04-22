@@ -2,12 +2,7 @@ import AxiosService from '../services/AxiosService';
 
 const baseURL = "http://localhost:8080";
 
-// const header = {
-//     headers: {
-//         token: localStorage.getItem('token')
-//     }
-// }
-
+const token = localStorage.getItem('token');
 
 export class UserService {
 
@@ -33,44 +28,46 @@ export class UserService {
             this.axiosService.put(`${baseURL}/user/reset_password/`+token, data, ''));
     }
 
-    // verfiyToken() {
-    //     return (
-    //         this.axiosService.get(`${baseURL}/user/verify`, header)
-    //     )
-    // }
+    verfiyToken() {
+        return (
+            this.axiosService.get(`${baseURL}/user/verify`, {token})
+        )
+    }
+    
+     /* Note service */
 
+    addNote(data) {
+        return (
+            this.axiosService.post(`${baseURL}/note/create`, data, {token})
+        )
+    }
 
-    // /* Note service */
-    // addNote(data) {
-    //     return (
-    //         this.axiosService.post(`${baseURL}/create`, header, data)
-    //     )
-    // }
+    getAllNotes(archive, trash) { 
+        return (  
+            this.axiosService.get(`${baseURL}/note/allNote?isArchive=${archive}&isTrash=${trash}`, {token})           
+        )
+    }
 
+    updateNote(data) {
+        console.log(data);
+        return (
+            this.axiosService.put(`${baseURL}/note/update`, data, {token})
+        )
+    }
 
-    // updateNote(data) {
-    //     console.log(data);
-    //     return (
-    //         this.axiosService.put(`${baseURL}/update`, header, data)
-    //     )
-    // }
+     archiveNote(noteId) {
+        console.log(noteId);
+        return (
+            this.axiosService.get(`${baseURL}/note/isArchive?noteId=${noteId}`,{token})
+        )
+    }
 
-    // deleteNote(data) {
-    //     return (
-    //         this.axiosService.delete(`${baseURL}/delete/id`, header, data)
-    //     )
-    // }
+    deleteNote(noteId){
+        console.log(noteId);
+        return (
+            this.axiosService.delete(`${baseURL}/note/delete?noteId=${noteId}`,{token})
+        )
 
-    // archiveNote(data) {
-    //     return (
-    //         this.axiosService.get(`${baseURL}/isArchive`, header, data)
-    //     )
-    // }
-
-    // getAllNotes(data) {
-    //     return (
-    //         this.axiosService.get(`${baseURL}/allNote`, header, data)
-    //     )
-    // }
-
+    }
+    
 }
